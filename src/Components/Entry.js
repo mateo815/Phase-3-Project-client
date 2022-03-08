@@ -10,7 +10,7 @@ function Entry({ e }) {
 
     return (
         <div>
-            <h2>e.title</h2>
+            <h2>{e.date}</h2>
             <p>hello</p>
             <p>
                 <strong> - Fill in </strong>

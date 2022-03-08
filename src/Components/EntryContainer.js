@@ -2,18 +2,19 @@ import React from "react";
 import Entry from "./Entry";
 
 
-function EntryContainer({ entry }) {
+function EntryContainer({ entries }) {
 
-    // const entryList = entry.map((e) => (
-    //     <Entry
-    //         key={e.id}
-    //         e={e} />
-    // ))
+
+    const entryList = entries.map((e) => (
+        <Entry
+            key={e.id}
+            e={e}/>
+    ))
 
 
     return (
         <div className="entry-container">
-           
+           {entryList}
         </div>
 
     );
