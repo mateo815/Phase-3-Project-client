@@ -2,19 +2,20 @@ import React from "react";
 import Entry from "./Entry";
 
 
-function EntryContainer({ entries }) {
+function EntryContainer({ users }) {
 
+    
 
-    const entryList = entries.map((e) => (
+    const userList = users.map((u) => (
         <Entry
-            key={e.id}
-            e={e}/>
+            key={u.id}
+            u={u}/>
     ))
 
 
     return (
         <div className="entry-container">
-           {entryList}
+           {userList}
         </div>
 
     );

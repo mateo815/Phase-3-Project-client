@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-function Entry({ e }) {
-
+function Entry({ u }) {
+console.log(u)
     const [feel, setFeel] = useState(true)
 
     function handleFeel() {
@@ -10,7 +10,7 @@ function Entry({ e }) {
 
     return (
         <div>
-            <h2>{e.date}</h2>
+            <h2>{u.name}</h2>
             <p>hello</p>
             <p>
                 <strong> - Fill in </strong>
