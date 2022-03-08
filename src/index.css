@@ -16,10 +16,10 @@ body {
   background: #e5fdff;
   padding: 1em;
 }
-
+/* 
 .sidebar > button {
   width: 100%;
-}
+} */
 
 .entries-container {
   max-width: 30em;

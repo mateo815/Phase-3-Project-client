@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EntryContainer from "./EntryContainer";
 import NewEntryForm from "./NewEntryForm";
+import UserContainer from "./UserContainer";
 
 function App() {
   const [entries, setEntries] = useState([]);
@@ -19,8 +20,8 @@ function App() {
       .then(setUsers);
   }, []);
 
-  console.log(entries)
-  console.log(users)
+  console.log("entries", entries)
+  console.log("users", users)
 
   function handleHide() {
     setShowForm((showForm) => !showForm)
@@ -28,14 +29,16 @@ function App() {
 
   return (
     <div className="App">
-      <header> Hello there!</header>
+      <header> How You Feelin? </header>
       <div className="sidebar">
         <button onClick={handleHide} > Show/Hide </button>
-        {showForm ? <NewEntryForm entries={entries} setEntries={setEntries} /> : !showForm}
+        {showForm ? <NewEntryForm setEntries={setEntries} /> : !showForm}
         <header className="App-header">
           <p>Hello from React</p>
         </header>
-        <EntryContainer users={users} />
+        <UserContainer users={users} />
+      
+
       </div>
     </div>
   );
