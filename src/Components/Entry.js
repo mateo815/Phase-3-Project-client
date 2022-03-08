@@ -5,13 +5,13 @@ function Entry({ e }) {
     const [feel, setFeel] = useState(true)
 
     function handleFeel() {
-        setFeel({ feel }=> !feel)
+        setFeel((feel) => !feel)
     }
 
     return (
         <div>
             <h2>e.title</h2>
-            <p>{p.content}</p>
+            <p>hello</p>
             <p>
                 <strong> - Fill in </strong>
             </p>

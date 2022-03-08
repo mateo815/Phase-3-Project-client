@@ -16,7 +16,7 @@ function NewEntryForm({setEntries, entries}) {
     function handleEmotionChange(e){
         setEmotion(e.target.value)
     }
-    function handleNotehange(e){
+    function handleNoteChange(e){
         setNote(e.target.value)
     }
     function handleForm(e){
