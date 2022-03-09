@@ -39,7 +39,7 @@ function NewEntryForm({ onAddEntry }) {
             .then(onAddEntry)
 
         setFormData({
-            data: '',
+            date: '',
             emotion: '',
             note: '',
             user_id: ''
@@ -47,20 +47,17 @@ function NewEntryForm({ onAddEntry }) {
     }
     return (
         <form
-            onSubmit={handleForm}
+            onSubmit={handleSubmit}
             className="new-entry-form">
-            <input onChange={handleNameChange}
-                placeholder="Your Name"
-                value={name} />
-            <input onChange={handleDateChange}
+            <input onChange={handleChange}
                 placeholder="today's date mm/dd/yyyy"
-                value={date} />
-            <input onChange={handleEmotionChange}
+                value={formData.date} />
+            <input onChange={handleChange}
                 placeholder="One word for the emotion you feel right now" rows={5}
-                value={emotion} />
-            <textarea onChange={handleNoteChange}
+                value={formData.emotion} />
+            <textarea onChange={handleChange}
                 placeholder="Write an entry about how you feel"
-                value={note} />
+                value={formData.note} />
             <input
                 type="submit" value="Submit your entry" />
         </form>
