@@ -1,19 +1,24 @@
 import React from 'react'
 
-function Entry({e}) {
+function Entry({entry, onDeleteEntry}) {
 
+  function handleClick() {
+      fetch(`http://localhost:9292/entries/${entry.id}`, {
+        method: "DELETE",
+      })
+        .then((r) => r.json())
+        .then(() => onDeleteEntry(entry));
+    }
   // make a delete handler and also useEffect for delete fetch
   return (
     <div>
-      <h2>{e.user_id}</h2>
-      <p>{e.date}</p>
+      <h2>{entry.id}</h2>
+      <p>{entry.date}</p>
       <p>
-        <strong>{e.emotion}</strong>
+        <strong>{entry.emotion}</strong>
       </p>
-      <p>{e.note}</p>
-      <button>
-
-      </button>
+      <p>{entry.note}</p>
+      <button onClick={handleClick}>Delete</button>
     </div>
   )
 }

@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
 function User({ u }) {
 console.log(u)
-    const [feel, setFeel] = useState(true)
+    // const [feel, setFeel] = useState(true)
 
-    function handleFeel() {
-        setFeel((feel) => !feel)
-    }
+    // function handleFeel() {
+    //     // setFeel((feel) => !feel)
+    // }
 
     return (
         <div>

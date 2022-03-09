@@ -27,6 +27,11 @@ function App() {
     setShowForm((showForm) => !showForm)
   }
 
+  function handleDeleteEntry(deletedEntry) {
+    const updatedEntries = entries.filter((entry) => entry.id !== deletedEntry.id);
+  setEntries(updatedEntries);
+  }
+
   return (
     <div className="app">
       {/* <header> How You Feelin? </header> */}
@@ -35,7 +40,7 @@ function App() {
         {showForm ? <NewEntryForm setEntries={setEntries} /> : !showForm}
         <UserContainer users={users} />
       </div>
-      <EntryContainer users={users} entries={entries} />
+      <EntryContainer entries={entries} handleDeleteEntry={handleDeleteEntry} />
     </div>
   );
 }

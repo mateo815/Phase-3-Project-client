@@ -1,12 +1,16 @@
 import React from 'react'
 import Entry from "./Entry"
-import User from "./User"
 
-function EntryContainer({entries}) {
+
+function EntryContainer({entries, handleDeleteEntry}) {
  
-  const allEntries = entries.map((e) => (
-    <Entry key={e.id} e={e} />
+  
+
+  const allEntries = entries.map((entry) => (
+    <Entry key={entry.id} entry={entry} onDeleteEntry={handleDeleteEntry}/>
   ))
+
+  
 
 
   
