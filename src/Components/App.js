@@ -29,7 +29,11 @@ function App() {
 
   function handleDeleteEntry(deletedEntry) {
     const updatedEntries = entries.filter((entry) => entry.id !== deletedEntry.id);
-  setEntries(updatedEntries);
+    setEntries(updatedEntries);
+  }
+
+  function handleAddEntry(newEntry) {
+    setEntries([newEntry, ...entries])
   }
 
   return (
@@ -37,7 +41,7 @@ function App() {
       {/* <header> How You Feelin? </header> */}
       <div className="sidebar">
         <button onClick={handleHide} > Show/Hide </button>
-        {showForm ? <NewEntryForm setEntries={setEntries} /> : !showForm}
+        {showForm ? <NewEntryForm onAddEntry={handleAddEntry} /> : !showForm}
         <UserContainer users={users} />
       </div>
       <EntryContainer entries={entries} handleDeleteEntry={handleDeleteEntry} />
