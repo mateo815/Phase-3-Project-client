@@ -28,17 +28,14 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <header> How You Feelin? </header>
+    <div className="app">
+      {/* <header> How You Feelin? </header> */}
       <div className="sidebar">
         <button onClick={handleHide} > Show/Hide </button>
         {showForm ? <NewEntryForm setEntries={setEntries} /> : !showForm}
-        <header className="App-header">
-          <p>Hello from React</p>
-        </header>
         <UserContainer users={users} />
       </div>
-      <EntryContainer entries={entries} />
+      <EntryContainer users={users} entries={entries} />
     </div>
   );
 }

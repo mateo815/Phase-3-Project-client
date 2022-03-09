@@ -1,12 +1,19 @@
 import React from 'react'
 
 function Entry({e}) {
+
+  // make a delete handler and also useEffect for delete fetch
   return (
     <div>
       <h2>{e.user_id}</h2>
-      <h3>{e.date}</h3>
-      <p>{e.emotion}</p>
+      <p>{e.date}</p>
+      <p>
+        <strong>{e.emotion}</strong>
+      </p>
       <p>{e.note}</p>
+      <button>
+
+      </button>
     </div>
   )
 }

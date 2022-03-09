@@ -10,7 +10,7 @@ function UserContainer({ users }) {
             u={u}/>
     ))
     return (
-        <div className="entry-container">
+        <div >
            {userList}
         </div>
 
