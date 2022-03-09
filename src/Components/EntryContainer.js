@@ -1,10 +1,13 @@
 import React from 'react'
+import Entry from "./Entry"
 
-function EntryContainer() {
+function EntryContainer({entries}) {
+  const allEntries = entries.map((e) => (
+    <Entry key={e.id} e={e} />
+  ))
+
   return (
-    <div EntryContainer>
-      
-    </div>
+    <div>{allEntries}</div>
   )
 }
 

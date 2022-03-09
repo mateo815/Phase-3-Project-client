@@ -37,9 +37,8 @@ function App() {
           <p>Hello from React</p>
         </header>
         <UserContainer users={users} />
-      
-
       </div>
+      <EntryContainer entries={entries} />
     </div>
   );
 }
