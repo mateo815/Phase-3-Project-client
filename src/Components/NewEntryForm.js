@@ -11,13 +11,15 @@ function NewEntryForm({ onAddEntry }) {
     })
 
     function handleChange(e) {
-        setFormData({
-            ...formData,
-            [e.target.date]: e.target.value
+        setFormData((prevState) => {
+            return {
+                ...prevState, [e.target.name]: e.target.value
+            }
         })
     }
 
-    function handleSubmit() {
+    function handleSubmit(e) {
+        e.preventDefault()
         const newForm = {
             date: formData.date,
             emotion: formData.emotion,
@@ -47,15 +49,20 @@ function NewEntryForm({ onAddEntry }) {
     }
     return (
         <form
-            onSubmit={handleSubmit}
-            className="new-entry-form">
+            onSubmit={handleSubmit}>
             <input onChange={handleChange}
+                type='text'
+                name="date"
                 placeholder="today's date mm/dd/yyyy"
                 value={formData.date} />
             <input onChange={handleChange}
+                type='text'
+                name="emotion"
                 placeholder="One word for the emotion you feel right now" rows={5}
                 value={formData.emotion} />
             <textarea onChange={handleChange}
+                type='text'
+                name="note"
                 placeholder="Write an entry about how you feel"
                 value={formData.note} />
             <input
