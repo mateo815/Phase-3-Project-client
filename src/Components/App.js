@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import EntryContainer from "./EntryContainer";
 import NewEntryForm from "./NewEntryForm";
 import UserContainer from "./UserContainer";
+import Header from './Header';
 
 function App() {
   const [entries, setEntries] = useState([]);
@@ -37,8 +38,9 @@ function App() {
   }
 
   return (
+   <div>
+      <Header />
     <div className="app">
-      {/* <header> How You Feelin? </header> */}
       <div className="sidebar">
         <button onClick={handleHide} > Create a New Entry </button>
         {showForm ? <NewEntryForm onAddEntry={handleAddEntry} /> : !showForm}
@@ -46,6 +48,7 @@ function App() {
       </div>
       <EntryContainer entries={entries} handleDeleteEntry={handleDeleteEntry} />
     </div>
+   </div>
   );
 }
 
