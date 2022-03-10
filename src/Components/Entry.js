@@ -11,14 +11,13 @@ function Entry({entry, onDeleteEntry}) {
     }
   // make a delete handler and also useEffect for delete fetch
   return (
-    <div>
-      <h2>{entry.id}</h2>
-      <p>{entry.date}</p>
+    <div className="div-entry">
+      <h2>{entry.date}</h2>
       <p>
         <strong>{entry.emotion}</strong>
       </p>
       <p>{entry.note}</p>
-      <button onClick={handleClick}>Delete</button>
+      <button onClick={handleClick}>🗑️</button>
     </div>
   )
 }

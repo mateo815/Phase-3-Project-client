@@ -10,7 +10,7 @@ console.log(u)
 
     return (
         <div>
-            <h2>{u.name}</h2>
+            <h2></h2>
             
           
         </div>

@@ -49,16 +49,16 @@ function NewEntryForm({ onAddEntry }) {
     }
     return (
         <form
-            onSubmit={handleSubmit}>
+            onSubmit={handleSubmit} className="new-entry-form">
             <input onChange={handleChange}
                 type='text'
                 name="date"
-                placeholder="today's date mm/dd/yyyy"
+                placeholder="Date mm/dd/yyyy"
                 value={formData.date} />
             <input onChange={handleChange}
                 type='text'
                 name="emotion"
-                placeholder="One word for the emotion you feel right now" rows={5}
+                placeholder="Emotion" rows={5}
                 value={formData.emotion} />
             <textarea onChange={handleChange}
                 type='text'

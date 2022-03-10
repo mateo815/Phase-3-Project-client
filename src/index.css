@@ -6,6 +6,7 @@ body {
 .app {
   display: flex;
   flex-direction: row;
+  background-color: rgb(127, 186, 241);
 }
 
 .sidebar {
@@ -13,7 +14,7 @@ body {
   min-width: 12em;
   width: 28%;
   border-right: solid black 1px;
-  background: #e5fdff;
+  background: rgb(195, 225, 253);
   padding: 1em;
 }
 
@@ -48,14 +49,23 @@ form.new-enrty-form > textarea {
   font-size: 1em;
   font-family: sans-serif;
   margin-bottom: 0.5em;
+  
 }
 
 input[type="submit"],
 button {
   font-weight: bold;
   font-size: 1em;
-  background: #04e8ff;
+  background: rgb(202, 201, 201);
   border: solid black 1px;
   padding: 0.5em;
   cursor: pointer;
 }
+
+.div-entry {
+  background-color: rgb(195, 225, 253);
+  border: solid black 1px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+

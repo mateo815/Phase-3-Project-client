@@ -40,7 +40,7 @@ function App() {
     <div className="app">
       {/* <header> How You Feelin? </header> */}
       <div className="sidebar">
-        <button onClick={handleHide} > Show/Hide </button>
+        <button onClick={handleHide} > Create a New Entry </button>
         {showForm ? <NewEntryForm onAddEntry={handleAddEntry} /> : !showForm}
         <UserContainer users={users} />
       </div>
